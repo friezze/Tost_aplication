@@ -9,33 +9,31 @@ using Xamarin.Essentials;
 
 namespace shot
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         
         int a = Preferences.Get("counter", 0);
         public MainPage()
         {
             InitializeComponent();
-            TostCounter.Text = a.ToString();
+      
         }
 
-        private void Button_Click1(object sender, EventArgs e)
-        {
-            if (true)
-            {
+        //private void Button_Click1(object sender, EventArgs e)
+        //{
+        //    
+        //    a++;
 
-            }
-            a++;
+        //    TostCounter.Text = a.ToString();
+        //    Preferences.Set("counter", a);
+        //}
 
-            TostCounter.Text = a.ToString();
-            Preferences.Set("counter", a);
-        }
-
-        private void Button_Click2(object sender, EventArgs e)
-        {
-            a = 0;
-            TostCounter.Text = a.ToString();
-            Preferences.Set("counter", a);
-        }
+        //private void Button_Click2(object sender, EventArgs e)
+        //{
+        //    a = 0;
+        //    TostCounter.Text = a.ToString();
+        //    Preferences.Set("counter", a);
+        //}
+     
     }
 }
