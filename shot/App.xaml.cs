@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using MediaManager;
 
 namespace shot
 {
@@ -13,13 +14,16 @@ namespace shot
         {
             InitializeComponent();
 
-            var tabbetPage = new TabbedPage();
+            //var tabbetPage = new TabbedPage();
+            MainPage = new MainPage();
 
-            tabbetPage.Children.Add(new Page1());
-            tabbetPage.Children.Add(new Page2());
+            CrossMediaManager.Current.Init();
 
-            MainPage = new TabbedPage();
-            MainPage = tabbetPage;
+            //tabbetPage.Children.Add(new Page1());
+            //tabbetPage.Children.Add(new Page2());
+
+            //MainPage = new TabbedPage();
+            //MainPage = tabbetPage;
 
             
 

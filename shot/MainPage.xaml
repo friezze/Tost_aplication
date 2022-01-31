@@ -3,4 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:shot"
              x:Class="shot.MainPage">
+
+
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Conter">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label x:Name="Count"
+                   Text="0"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Button Text="Tost" Clicked ="TostUp"></Button>
+                <Button Text="Reset" Clicked ="Reset"></Button>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Help">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="0"
+                   x:Name="Count2"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Text="Help" Clicked ="HelpMe"></Button>
+                <Button Text="Sound" Clicked ="SingBaby"></Button>
+                <Button Text="Tost" Clicked ="TostUp2"></Button>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
 </TabbedPage>
