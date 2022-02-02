@@ -32,7 +32,12 @@
                    x:Name="Count2"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <Button Text="Help" Clicked ="HelpMe"></Button>
+                <Label Text="Place for tost"
+                   x:Name="HelpArea"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Text="Help" Clicked ="propose"></Button>
+                <Button Text="TestStop" Clicked ="HelpMe"></Button>
                 <Button Text="Sound" Clicked ="SingBaby"></Button>
                 <Button Text="Tost" Clicked ="TostUp2"></Button>
             </StackLayout>

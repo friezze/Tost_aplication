@@ -106,5 +106,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Assets\2.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\listTost.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -7,19 +7,40 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using MediaManager;
+using System.IO;
+using System.Reflection;
 
 
 namespace shot
 {
     public partial class MainPage : TabbedPage
     {
-        
+        Stream sr;
+        StreamReader sr1;
+        string[] tostList = new string[10];
         int a = Preferences.Get("counter", 0);
+       public  List<string> lis;
         public MainPage()
         {
             InitializeComponent();
             Count.Text = App.a.ToString();
             Count2.Text = App.a.ToString();
+
+
+            var t = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+
+            sr = t.GetManifestResourceStream("shot.listTost.txt");
+            sr1 = new StreamReader(sr);
+
+            for (int i = 0; i < 10; i++)
+            {
+                string tmp = sr1.ReadLine();
+                HelpArea.Text = tmp;
+                tostList[i] = tmp;
+            }
+            
+                
+          
 
         }
 
@@ -82,6 +103,19 @@ namespace shot
             Preferences.Set("counter", App.a);
             Count.Text = App.a.ToString();
             Count2.Text = App.a.ToString();
+        }
+
+        private void propose(object sender, System.EventArgs e)
+        {
+            Random rnd = new Random();
+            int a = rnd.Next(0, 10);
+            string ultratmp = " ";
+            for (int i =0; i <= a; i++)
+            {
+                ultratmp= tostList[i];
+                
+            }
+            HelpArea.Text = ultratmp;
         }
 
     }
